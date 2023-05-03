@@ -56,7 +56,7 @@ class PagerDutyNotification(BaseNotification):  # pylint: disable=too-few-public
                         "meesho_app": "prism-model"
                         }
                     },
-                "routing_key": "2298258335024d0cc03f42e657af25b5",#app.config["PAGERDUTY_ROUTING_KEY_BIZFIN"],
+                "routing_key": app.config["PAGERDUTY_ROUTING_KEY_BIZFIN"],
                 "event_action": "trigger"
             })
             return payload
