@@ -411,10 +411,12 @@ def cached_common_bootstrap_data(user: User) -> Dict[str, Any]:
         frontend_config["ALERT_REPORTS_NOTIFICATION_METHODS"] = [
             ReportRecipientType.EMAIL,
             ReportRecipientType.SLACK,
+            ReportRecipientType.PAGERDUTY,
         ]
     else:
         frontend_config["ALERT_REPORTS_NOTIFICATION_METHODS"] = [
             ReportRecipientType.EMAIL,
+            ReportRecipientType.PAGERDUTY,
         ]
 
     # verify client has google sheets installed
