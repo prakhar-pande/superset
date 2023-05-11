@@ -73,7 +73,7 @@ class PagerDutyNotification(BaseNotification):  # pylint: disable=too-few-public
         logger.info(user_input)
         try:
             pager_duty_url = "https://events.pagerduty.com/v2/enqueue"
-            res = requests.post(pager_duty_url,data = payload,headers={"Content-Type": "application/json"})
-            logger.info(res.raw)
+            # res = requests.post(pager_duty_url,data = payload,headers={"Content-Type": "application/json"})
+            # logger.info(res.raw)
         except:
             pass

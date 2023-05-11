@@ -19,7 +19,12 @@
 # Node stage to deal with static asset construction
 ######################################################################
 ARG PY_VER=3.8.16-slim
-FROM node:16-slim AS superset-node
+#FROM node:16-slim AS superset-node
+ARG BUILDPLATFORM=amd64
+ARG BUILDPLATFORM=${BUILDPLATFORM:-amd64}
+FROM --platform=${BUILDPLATFORM} node:16-slim AS superset-node
+RUN apt-get update
+RUN apt-get install -y g++ python3 make  && ln -sf /usr/bin/python3 /usr/bin/python
 
 ARG NPM_BUILD_CMD="build"
 ENV BUILD_CMD=${NPM_BUILD_CMD}
