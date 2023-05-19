@@ -1486,7 +1486,7 @@ class NVD3TimeSeriesViz(NVD3Viz):
                 if comparison_type == "absolute":
                     diff = df - df2
                 elif comparison_type == "percentage":
-                    diff = (df - df2) / df2
+                    diff = ((df - df2) * 100) / df2
                 elif comparison_type == "ratio":
                     diff = df / df2
                 else:
