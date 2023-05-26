@@ -107,6 +107,7 @@ WEBDRIVER_BASEURL = "http://superset:8088/"
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
+PAGERDUTY_ROUTING_KEY_BIZFIN = get_env_variable("PAGERDUTY_ROUTING_KEY_BIZFIN")
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
